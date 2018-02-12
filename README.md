@@ -53,7 +53,7 @@ module.exports = function override(config, env) {
 |   +-- src
 ```
 
-**Note:** You can use one of the default rewires (see the [packages](/packages) dir) or [injectBabelPlugin](https://github.com/steveesamson/inferno-app-rewired#utilities-injectbabelplugin)
+**Note:** You can use one of the default rewires
 
 #### 3) 'Flip' the existing calls to `inferno-scripts` in `npm` scripts
 ```diff
@@ -89,7 +89,6 @@ Adding a Babel plugin can be done via the `injectBabelPlugin(pluginName, config)
 
 ```javascript
 const rewireMobX = require('inferno-app-rewire-mobx');
-const rewirePreact = require('inferno-app-rewire-preact');
 const {injectBabelPlugin} = require('inferno-app-rewired');
 
 /* config-overrides.js */
@@ -97,11 +96,6 @@ module.exports = function override(config, env) {
   // add a plugin
   config = injectBabelPlugin('emotion/babel',config)
   
-  // use the Preact rewire
-  if (env === "production") {
-    console.log("⚡ Production build with Preact");
-    config = rewirePreact(config, env);
-  }
   
   // use the MobX rewire
   config = rewireMobX(config,env);
@@ -121,7 +115,6 @@ Before:
 /* config-overrides.js */
 module.exports = function override(config, env) {
   config = rewireLess(config, env);
-  config = rewirePreact(config, env);
   config = rewireMobX(config, env);
   
   return config;
@@ -134,7 +127,6 @@ const { compose } = require('inferno-app-rewired');
 
 module.exports = compose(
   rewireLess,
-  rewirePreact,
   rewireMobx
   ...
 )
@@ -142,7 +134,6 @@ module.exports = compose(
 module.exports = function(config, env){
   const rewires = compose(
     rewireLess,
-    rewirePreact,
     rewireMobx
     ...
   );
