@@ -8,9 +8,6 @@ All the benefits of create-inferno-app without the limitations of "no config". Y
 
 
  
-[![npm version](https://img.shields.io/npm/v/infeno-app-rewired.svg)](https://www.npmjs.com/package/inferno-app-rewired)
-[![npm monthly downloads](https://img.shields.io/npm/dm/inferno-app-rewired.svg)](https://www.npmjs.com/package/inferno-app-rewired)
- 
 
 # Rewire Your App
 
