@@ -1,13 +1,13 @@
 {
   "name": "inferno-app-rewired",
-  "version": "1.4.7",
+  "version": "1.4.8",
   "description": "Tweak the create-inferno-app webpack config(s) without using 'eject' and without creating a fork of the inferno-scripts",
   "private": false,
   "bin": {
     "inferno-app-rewired": "./bin/index.js"
   },
   "peerDependencies": {
-    "inferno-scripts":">=6.0.0"	
+    "inferno-scripts": ">=6.0.0"
   },
   "dependencies": {
     "cross-spawn": "^5.1.0",
