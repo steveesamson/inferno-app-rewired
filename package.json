@@ -6,10 +6,12 @@
   "bin": {
     "inferno-app-rewired": "./bin/index.js"
   },
+  "peerDependencies": {
+    "inferno-scripts":">=6.0.0"	
+  },
   "dependencies": {
     "cross-spawn": "^5.1.0",
     "dotenv": "^4.0.0",
-    "inferno-scripts": "^6.0.0"
   },
   "repository": {
     "type": "git",
